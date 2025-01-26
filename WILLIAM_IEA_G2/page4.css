@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@font-face {
+  font-family: "PP Mori", sans-serif;
+      src: url(fonts/PPMORI-REGULAR.OTF) format("opentype");
+}
+  
+body {
+    font-family: "PP Mori", sans-serif;
+
+    width: 100%;
+    transition: background-image 0.3s, color 0.3s;
+    background-image: url("img/fond\ texture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: end;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 30px;
+}
+
+.logo-yeuz-text {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+}
+
+.logo-yeuz-text img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.logo-yeuz-text1 {
+  width: 120px;
+}
+
+.logo-yeuz-text2 {
+  width: 120px;
+  opacity: 0;
+}
+
+.dark-mode .logo-yeuz-text1 {
+  opacity: 0;
+}
+
+.dark-mode .logo-yeuz-text2 {
+  opacity: 1;
+}
+
+.dark-mode {
+  background-image: url("img/fond\ texture\ sombre.jpg");
+  color: white;
+}
+
+button {
+  margin-bottom: 16px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: black;
+}
+
+.dark-mode button {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.dark-mode button:hover {
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  
+.menu {
+    max-width: 30%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+  
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+  
+.tab:hover {
+    background-color: #dbdbdb;
+}
+
+.dark-mode .tab {
+  background-color: #323232;
+}
+  
+.tab-visible {
+    background-color: #101010;
+    color: #ffffff;
+    border-color: #101010;
+}
+
+.dark-mode .tab-visible {
+  background-color: #f7f7f7;
+  color: black;
+  border-color: #f7f7f7;
+}
+
+.content {
+    display: none;
+}
+  
+.content.visible {
+    display: block;
+    padding: 20px;
+    border: 2px solid #cccccc;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.dark-mode .content.visible {
+  display: block;
+  padding: 20px;
+  border: 2px solid #cccccc;
+  background-color: #101010;
+  border-radius: 5px;
+}
+
+.image {
+  width: 360px;
+  margin: 20px;
+  display: flex;
+  border: 2px solid #cccccc;
+}
+
+.mellow {
+  width: 360px;
+  margin: 20px;
+  display: flex;
+}
+
+.content.content1.visible {
+  justify-items: center;
+}
+
+.content.content1.visible h1 {
+  width: 360px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content.content2 {
+  justify-items: center;
+}
+
+.content.content2 h1 {
+  width: 360px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content.content3 {
+  justify-items: center;
+}
+
+.content.content3 h1 {
+  width: 360px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.socials {
+  font-size: 14px;
+  bottom: 0;
+}
+
+.fixedbar {
+  font-size: 14px;
+  bottom: 0;
+}
+
+footer {
+  display: grid;
+  width: 100%;
+  padding: 30px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 30px;
+  font-size: 24px;
+}
+
+.fixedbar {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: end;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  font-size: 24px;
+}
+
+.fixedbar p {
+  font-size: 18px;
+}
